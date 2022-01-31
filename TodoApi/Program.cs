@@ -1,17 +1,9 @@
 using System.Reflection;
 using AutoMapper;
 //using HelloWorldGenerated;
-//using NetEscapades.EnumGenerators;
+using EnumGenerators;
 
 HelloWorldGenerated.HelloWorld.SayHello();
-
-// [EnumExtensions] // Our marker attribute
-// public enum Colour
-// {
-//     Red = 0,
-//     Blue = 1,
-// }
-
 
 //using MapProfilesGenerated;
 
@@ -98,4 +90,11 @@ public interface IMapFrom<T>
     {
         profile.CreateMap(typeof(T), GetType());
     }
+}
+// https://github.com/dotnet/roslyn/issues/44093
+[EnumExtensions] // Our marker attribute
+public enum Colour
+{
+    Red = 0,
+    Blue = 1,
 }

@@ -24,3 +24,5 @@ TestResults/
 
 # Visual Studio 2015
 .vs/
+# JetBrains Rider
+.idea 
